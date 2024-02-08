@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 1 - Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1 onclick="console.log('Click en H1...');">Calendario Planta Industrial</h1>
+      <form>
+        <h2 class="Exercise1" style="color: blueviolet;"> Ejercicio #1 </h2>
+        <p>We'll build the industry plant calendar from the opening exercise.</p>
+        
+        <h3 class="Part1" style="color: blue;"> Parte 1</h3>
+        <p>Primero, se crea una función llamada "horarioComercial". Este acepta dos parámetros: númeroDeDía y númeroDeHora.</p>
+        <p>Al leer el númeroDeDía y el númeroDeHora, tu programa debería imprimir si es horario comercial o no. Debería devolver true si es horario comercial y false si no lo es.</p>
+        <p>Obs: se considera horario comercial de 9 am a 6 pm. Se utiliza el sistema de reloj de 24 horas (6 pm = 18).</p>
+
+        <!-- Día de la semana -->
+        <div class="mb-3">
+          <label for="txtDay" class="form-label">Ingrese el número del día de la semana (1-7):</label>
+          <input type="number" inputmode="numeric" class="form-control" id="txtDay" min="1" max="7" autofocus>
+        </div>
+        <!-- Botón y alerta para el día -->
+        <button type="button" class="btn btn-primary" id="btnSubmitDay">Submit Day</button>
+        <div class="alert alert-light" role="alert" id="alertResultadoDay"></div>
+
+        <!-- Hora -->
+        <div class="mb-3">
+          <label for="txtHour" class="form-label">Ingrese la hora para determinar si es hora laboral o no (ingrese solo números válidos 0-23):</label>
+          <input type="number" inputmode="numeric" class="form-control" id="txtHour">
+        </div>
+        <!-- Botón y alerta para la hora -->
+        <button type="button" class="btn btn-primary" id="btnSubmitHour">Submit Hour</button>
+        <div class="alert alert-light" role="alert" id="alertResultadoHour"></div>
+      </form>
+      <h3 class="Part2" style="color: green;"> Parte 2</h3>
+      <p>Ahora, se crea la función "obtenerNúmeroDeDía".</p>
+      <p>Este acepta dos parámetros: númeroDeDíaPrimeroDeEnero y númeroDeDíaDelAño.</p>
+      <p>númeroDeDíaDelAño será un número entero que oscilará entre 0 y 365.</p>
+      <p>númeroDeDíaPrimeroDeEnero será un número entero comprendido entre 0 y 6, que representa el día de la semana el 1 de enero.</p>
+      <p>Luego, la función debería calcular y devolver el día de la semana correspondiente al númeroDeDíaDelAño pasado.</p>
+
+      <div class="mb-3">
+        <label for="janFirstDay" class="form-label">Ingrese el número de día de enero (0-6):</label>
+        <input type="number" inputmode="numeric" class="form-control" id="janFirstDay" min="0" max="6">
+      </div>
+      <div class="mb-3">
+        <label for="yearDay" class="form-label">Ingrese el número del año (0-365):</label>
+        <input type="number" inputmode="numeric" class="form-control" id="yearDay" min="0" max="365">
+      </div>
+      <button type="button" class="btn btn-primary" id="btnSubmitPart2">Submit Part 2</button>
+      <div class="alert alert-light" role="alert" id="alertResultadoPart2"></div>
+  
+      <h3 class="Part3" style="color: rgb(223, 42, 141);"> Parte 3</h3>
+      <p>Finalmente, se crea una función que, dado un número de día y año (int, 0-365) y un número de hora (int, 0-23), devuelve verdadero si es horario comercial y falso si no lo es.</p>
+      <p>Desafío: Se reemplaza los parámetros YearDayNumber y hourNumber con una variable Date.</p>
+
+      <div class="mb-3">
+        <label for="dayNumber" class="form-label">Ingrese el número de día (0-365):</label>
+        <input type="number" inputmode="numeric" class="form-control" id="dayNumber" min="0" max="365">
+      </div>
+      <div class="mb-3">
+        <label for="hour" class="form-label">Ingrese la hora (0-23):</label>
+        <input type="number" inputmode="numeric" class="form-control" id="hour" min="0" max="23">
+      </div>
+      <button type="button" class="btn btn-primary" id="btnSubmitPart3">Submit Part 3</button>
+      <div class="alert alert-light" role="alert" id="alertResultadoPart3"></div>
+
+    
+  </main>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
